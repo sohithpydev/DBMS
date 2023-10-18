@@ -1,0 +1,65 @@
+#Question 1:
+mysql> SELECT DISTINCT d.DeptName
+    -> FROM Department d
+    -> JOIN Faculty f ON d.DeptNo = f.DeptNo;
+Empty set (0.00 sec)
+
+#Question 2:
+mysql> SELECT s.Name, c.CourseNo
+    -> FROM Student s
+    -> CROSS JOIN Course c
+    -> WHERE (s.RegNo, c.CourseNo) NOT IN (SELECT RegNo, CourseNo FROM Grades);
++---------+----------+
+| Name    | CourseNo |
++---------+----------+
+| John    | C40      |
+| John    | C20      |
+| John    | C2       |
+| John    | C10      |
+| John    | C1       |
+| Alice   | C40      |
+| Alice   | C20      |
+| Alice   | C2       |
+| Alice   | C10      |
+| Alice   | C1       |
+| RAM     | C40      |
+| RAM     | C20      |
+| RAM     | C2       |
+| RAM     | C10      |
+| RAM     | C1       |
+| Sohith  | C40      |
+| Sohith  | C20      |
+| Sohith  | C2       |
+| Sohith  | C10      |
+| Sohith  | C1       |
+| Emma    | C40      |
+| Emma    | C20      |
+| Emma    | C2       |
+| Emma    | C10      |
+| Emma    | C1       |
+| Michael | C40      |
+| Michael | C20      |
+| Michael | C2       |
+| Michael | C10      |
+| Michael | C1       |
+| Olivia  | C40      |
+| Olivia  | C20      |
+| Olivia  | C2       |
+| Olivia  | C10      |
+| Olivia  | C1       |
+| William | C40      |
+| William | C20      |
+| William | C2       |
+| William | C10      |
+| William | C1       |
++---------+----------+
+
+#Question 3:
+
+mysql> SELECT c.CourseDesc
+    -> FROM Course c
+    -> JOIN Faculty f ON c.FacNo = f.FacNo
+    -> JOIN Department d ON f.DeptNo = d.DeptNo
+    -> WHERE f.FacName = 'Kamal' AND d.DeptName = 'ECE';
+Empty set (0.00 sec)
+
