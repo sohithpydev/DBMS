@@ -1,0 +1,46 @@
+mysql> desc student;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| RegNo    | int         | YES  |     | NULL    |       |
+| Name     | varchar(15) | YES  |     | NULL    |       |
+| Gender   | char(1)     | YES  |     | NULL    |       |
+| DOB      | date        | YES  |     | NULL    |       |
+| MobileNo | int         | YES  |     | NULL    |       |
+| City     | varchar(15) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+
+mysql> desc FACULTY;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| FacNo    | varchar(4)  | YES  |     | NULL    |       |
+| FacName  | varchar(15) | YES  |     | NULL    |       |
+| Gender   | char(1)     | YES  |     | NULL    |       |
+| DOB      | date        | YES  |     | NULL    |       |
+| DOJ      | date        | YES  |     | NULL    |       |
+| MobileNo | int         | YES  |     | NULL    |       |
+| DeptNo   | varchar(4)  | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+
+
+mysql> desc COURSE;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| CourseNo   | varchar(3)  | YES  |     | NULL    |       |
+| CourseDesc | varchar(14) | YES  |     | NULL    |       |
+| CourseType | char(1)     | YES  |     | NULL    |       |
+| SemNo      | char(1)     | YES  |     | NULL    |       |
+| HallNo     | varchar(4)  | YES  |     | NULL    |       |
+| FacNo      | varchar(4)  | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+
+mysql> desc department;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| DeptNo   | varchar(4)  | YES  |     | NULL    |       |
+| DeptName | varchar(15) | YES  |     | NULL    |       |
+| DeptHead | varchar(4)  | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
