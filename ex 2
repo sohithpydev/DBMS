@@ -1,0 +1,53 @@
+# Question 1:
+mysql> desc STUDENT;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| RegNo    | int         | NO   | PRI | NULL    |       |
+| Name     | varchar(15) | YES  |     | NULL    |       |
+| Gender   | char(1)     | YES  |     | NULL    |       |
+| DOB      | date        | YES  |     | NULL    |       |
+| MobileNo | int         | NO   |     | NULL    |       |
+| City     | varchar(15) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+
+#Question 2:
+mysql> desc FACULTY;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| FacNo    | varchar(4)  | NO   | PRI | NULL    |       |
+| FacName  | varchar(15) | YES  |     | NULL    |       |
+| Gender   | char(1)     | YES  |     | NULL    |       |
+| DOB      | date        | YES  |     | NULL    |       |
+| DOJ      | date        | YES  |     | NULL    |       |
+| MobileNo | int         | YES  |     | NULL    |       |
+| DeptNo   | varchar(4)  | YES  | MUL | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+
+#Question 4:
+mysql> desc FACULTY;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| FacNo    | varchar(4)  | NO   | PRI | NULL    |       |
+| FacName  | varchar(15) | YES  |     | NULL    |       |
+| Gender   | char(1)     | YES  |     | NULL    |       |
+| DOB      | date        | YES  |     | NULL    |       |
+| DOJ      | date        | YES  |     | NULL    |       |
+| MobileNo | int         | YES  |     | NULL    |       |
+| DeptNo   | varchar(4)  | YES  | MUL | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+
+#Question 5:
+mysql> desc course;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| CourseNo   | varchar(3)  | NO   | PRI | NULL    |       |
+| CourseDesc | varchar(14) | YES  |     | NULL    |       |
+| CourseType | char(1)     | YES  |     | NULL    |       |
+| SemNo      | char(1)     | YES  |     | NULL    |       |
+| HallNo     | varchar(4)  | YES  |     | NULL    |       |
+| FacNo      | varchar(4)  | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
