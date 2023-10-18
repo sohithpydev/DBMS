@@ -1,0 +1,26 @@
+mysql> CREATE TABLE Grades (
+    ->     StudentID INT,
+    ->     CourseNo VARCHAR(3),
+    ->     Mark INT,
+    ->     PRIMARY KEY (StudentID, CourseNo),
+    ->     FOREIGN KEY (StudentID) REFERENCES Student(RegNo),
+    ->     FOREIGN KEY (CourseNo) REFERENCES Course(CourseNo)
+    -> );
+Query OK, 0 rows affected (0.01 sec)
+mysql> SELECT AVG(Mark) as AverageMark
+    -> FROM Grades
+    -> WHERE CourseNo = 'C10';
++-------------+
+| AverageMark |
++-------------+
+|        NULL |
++-------------+
+mysql> SELECT
+    ->     MAX(Mark) as MaxMark,
+    ->     MIN(Mark) as MinMark
+    -> FROM Grades
+    -> WHERE CourseNo = 'C10';
++---------+---------+
+| MaxMark | MinMark |
++---------+---------+
+|    NULL |    NULL |
