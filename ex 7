@@ -1,0 +1,38 @@
+#Question 1:
+
+mysql> SELECT s.Name, s.Mark
+    -> FROM Student s
+    -> WHERE s.Mark > (SELECT MAX(Mark) FROM Grades);
+Empty set (0.00 sec)
+
+#Question 2:
+
+mysql> SELECT RegNo, Name
+    -> FROM Student
+    -> GROUP BY RegNo, Name
+    -> HAVING COUNT(RegNo) > 1;
+Empty set (0.00 sec)
+
+#Question 3:
+
+mysql> SELECT FacName, DOJ
+    -> FROM Faculty
+    -> ORDER BY DOJ DESC
+    -> LIMIT 1;
++--------------+------------+
+| FacName      | DOJ        |
++--------------+------------+
+| Dr. Williams | 2010-03-01 |
++--------------+------------+
+
+#Question 4:
+
+mysql> SELECT c.CourseDesc, g.Mark
+    -> FROM Course c
+    -> JOIN Grades g ON c.CourseNo = g.CourseNo
+    -> WHERE g.Mark > (
+    ->     SELECT AVG(Mark)
+    ->     FROM Grades
+    ->     WHERE CourseNo = c.CourseNo
+    -> );
+Empty set (0.00 sec)
