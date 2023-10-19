@@ -1,0 +1,97 @@
+mysql> select * from student;
++----+--------+---------+--------+
+| id | name   | city    | salary |
++----+--------+---------+--------+
+| 1 | sohith | chennai |   120 |
+| 2 | hema   | goa     |    55 |
+|  3| hello  | ongole  |   874 |
+| 4 | hello  | araku   |    74 |
+| 5 | ol     | chennai |    24 |
+| 6 | ola    | chirala |   743 |
+| 7 | uber   | chirala |    43 |
+| 8 | nahh   | chirala |  65743|
+| 9 | yea    | 3652    |   900 |
++----+--------+---------+--------+
+
+mysql> select
+    -> id,name,city,salary
+    -> from
+    -> student
+    -> order by name;
++----+--------+---------+--------+
+| id | name   | city    | salary |
++----+--------+---------+--------+
+| 3 | hello  | ongole  |   874 |
+| 4 | hello  | araku   |    74 |
+| 5 | ol     | chennai |    24 |
+| 6 | ola    | chirala |   743 |
+| 7 | uber   | chirala |    43 |
+| 8 | nahh   | chirala |  65743|
+| 9 | yea    | 3652    |   900 |
+
+mysql> call getstudent;
++--------+--------+----+
+| name   | salary | id |
++--------+--------+----+
+| bsr    |   NULL | 64 |
+| janu   |  65743 | 45 |
+| lokesh |   1234 | 11 |
+| loks   |    234 | 18 |
+| mani   |   6541 | 12 |
+| sai    |   9874 | 13 |
+| swetha |  65743 | 36 |
+| venky  |    874 | 14 |
+| venky  |  65743 | 63 |
+
+
+mysql> select * from student;
++----+--------+---------+--------+
+| id | name   | city    | salary |
++----+--------+---------+--------+
+| 11 | lokesh | chennai |   1234 |
+| 12 | mani   | goa     |   6541 |
+| 13 | sai    | ongole  |   9874 |
+| 14 | venky  | araku   |    874 |
+| 18 | loks   | chennai |    234 |
+| 36 | swetha | chirala |  65743 |
+| 45 | janu   | chirala |  65743 |
+| 63 | venky  | chirala |  65743 |
+| 64 | bsr    | 3652    |   NULL |
++----+--------+---------+--------+
+
+mysql> select * from cbn;
++----+---------+-------+
+| id | name    | phnno |
++----+---------+-------+
+| 26 | john    | 74592 |
+| 41 | pondu   | 96325 |
+| 61 | vasanth |  NULL |
++----+---------+-------+
+
+mysql> call getcbn;
++---------+
+| name    |
++---------+
+| john    |
+| pondu   |
+| vasanth |
++---------+
+
+mysql> delimiter ;
+mysql> call getstudent;
++------+--------+-------+
+| id   | salary | name  |
++------+--------+-------+
+|   58 |   7621 | kanth |
+|  165 |   9632 | quiz  |
++------+--------+-------+
+
+mysql> call getrenu(4);
++---------+------+--------+
+| name    | id   | salary |
++---------+------+--------+
+| bharath |   74 |   1234 |
+| krish   |   52 |   6523 |
+| kumar   |   34 |   7619 |
+| siva    |    2 |   6573 |
++---------+------+--------+
